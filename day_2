@@ -1,1 +1,41 @@
-
+# Day 2: 30 Days of python programming
+first_name = 'Raul'
+last_name = 'Rojo Name'
+full_name = 'Raul Rojo Name'
+country = 'United States'
+city = 'Tacoma'
+age = 300
+year = 2026
+is_married = True
+is_true = True
+is_light_on = False
+are_you_happy, why_not = False, 'I am lonely'
+print(type(first_name))
+print(type(last_name))
+print(type(full_name))
+print(type(country))
+print(type(city))
+print(type(age))
+print(type(year))
+print(type(is_married))
+print(type(is_true))
+print(type(is_light_on))
+print(type(are_you_happy))
+print(type(why_not))
+print(len(first_name))
+print(len(first_name) <= len(last_name))
+num_one = 5
+num_two = 4
+diff = num_one - num_two
+product = num_one * num_two
+division = num_one / num_two
+remainder = num_two % num_one
+exp = num_one ** num_two
+floor_division = num_one // num_two
+radius = float(input('Radius of circle:'))
+area_of_circle = (radius ** 2) * 3.14
+circum_of_circle = 2 * radius * 3.14
+user_first_name = input('Your first name:')
+user_last_name = input('Your last name:')
+user_country, user_age = input('Your county:'), input('Your age:')
+help('keywords')
