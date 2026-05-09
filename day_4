@@ -1,1 +1,33 @@
+string_list1 = ['Thirty', 'Days', 'Of', 'Python']
+print(' '.join(string_list1))
+space = ' '
+company = 'Coding' + space + 'For' + space + 'All'
+print(company)
+print(len(company))
+company.upper()
+print(company)
+company.lower()
+print(company)
+company.title()
+print(company)
+print(company[7:])
+if company.find('Coding') == -1:
+  print('\'Coding\' is not in the phrase')
+else:
+  print('\'Coding\' is in the phrase')
+company.replace('Coding', 'Python')
+print(company)
+py = 'Python For Everyone'
+py.replace('Everyone', 'All')
+print(py)
+string_list2 = company.split(' ')
+print(string_list2)
+companies = 'Facebook,Google,Microsoft,Apple,IBM,Oracle,Amazon'
+print(companies.split(','))
+print(f'The first character is {'Coding For All'[0]}.')
+print(f'The last index is {len('Coding For All') - 1}.')
+print(f'The character at index 10 is {'Coding For All'[10]}.')
+
+
+
 
