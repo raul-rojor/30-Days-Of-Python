@@ -3,17 +3,85 @@ my_height = 6
 im_num = 3j
 base = input('Enter the base of the traingle: ')
 height = input('Enter the height of the triangle: ')
-triangle_area = base * height * 0.5
+triangle_area = float(base) * float(height) * 0.5
 triangle_side1 = input('Enter the length of the triangle\'s first side')
 triangle_side2 = input('Enter the length of the triangle\'s second side')
 triangle_side3 = input('Enter the length of the triangle\'s third side')
-triangle_perimeter = triangle_side1 + triangle_side2 + triangle_side3
-print('THe perimeter of the triangle is', triangle_perimeter)
+triangle_perimeter = float(triangle_side1) + float(triangle_side2) + float(triangle_side3)
+print('The perimeter of the triangle is', triangle_perimeter)
 pi = 3.14
-radius = input('Radius of circle: ')
+radius = float(input('Radius of circle: '))
 area_of_circle = radius ** 2 * pi
 circum_of_circle = radius * pi * 2
 print(f'The area of the circle is {area_of_circle}.')
 print(f'The circumference of the circle is {circum_of_circle}.')
+x = 0
+y = 2 * x + 2
+print(f'The y-intercept of y is {y}')
+y = 0
+x = (y - 2) / 2
+print(f'The x-intercept of y is {x}')
+x1 = 1
+x2 = 2
+y1 = 2 * x1 + 2
+y2 = 2 * x2 + 2
+slope1 = (y2 - y1) / (x2 - x1)
+print(f'Slope is {slope1}')
+x1 = 2
+y1 = 2
+x2 = 6
+y2 = 10
+slope2 = (y2 - y1) / (x2 - x1)
+print(f'New slope is {slope2}')
+euclidean_distance = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+slope_dif = slope2 - slope1
+if slope2 == slope1:
+  bigger = 'so the slopes are equal'
+elif slope2 > slope1:
+  bigger = 'slope 2 is bigger than slope 1'
+else:
+  bigger = 'slope 1 is bigger than slope 2'
+print(f'The difference in the slopes is {slope_dif} and {bigger}.')
+x = 0
+y = x ** 2 + 6 * x + 9
+while y != 0:
+  if y > 0:
+    x -= 1
+    y = x ** 2 + 6 * x + 9
+  if y < 0:
+    x += 1
+    y = x ** 2 + 6 * x + 9
+print(f'The x-intercept of y is at x = {x}')
+print(len('python') < len('dragon'))
+print('on' in 'python' and 'on' in 'dragon')
+print('jargon' in 'I hope this course is not full of jargon')
+print(str(float(len('python'))))
+x_is_even = False
+if x % 2 == 0:
+  x_is_even = True
+print(f'x is even? {x_is_even}')
+equal = False
+if 7 // 3 == int(2.7):
+  equal = True
+print(f'7 // 3 is equal to int(2.7)? {equal}')
+type_is_equal = False
+if type('10') is type(10):
+  type_is_equal = True
+print(f'The types are equal? {type_is_equal}')
+are_nums_equal = False
+if int(float(('9.8')) == 10:
+  are_nums_equal = True
+print(f'These nums are equal? {are_nums_equal}')
+hours = int(input('Hours worked? '))
+rate = float(input('Pay rate? '))
+pay = hours * rate
+print(f'Your pay is ${pay}.')
+age = int(input('How many years have you lived? '))
+if age > 100 or age < 0:
+  print('You are too old or you are not born yet.')
+else:
+  secs_left = (100 - age) * 365 * 24 * 60 * 60
+  print('You have up to ' + str(secs_left) + ' seconds left. Use it wisely !!')
+print('1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125')
 
   
