@@ -1,0 +1,19 @@
+my_age = 19
+my_height = 6
+im_num = 3j
+base = input('Enter the base of the traingle: ')
+height = input('Enter the height of the triangle: ')
+triangle_area = base * height * 0.5
+triangle_side1 = input('Enter the length of the triangle\'s first side')
+triangle_side2 = input('Enter the length of the triangle\'s second side')
+triangle_side3 = input('Enter the length of the triangle\'s third side')
+triangle_perimeter = triangle_side1 + triangle_side2 + triangle_side3
+print('THe perimeter of the triangle is', triangle_perimeter)
+pi = 3.14
+radius = input('Radius of circle: ')
+area_of_circle = radius ** 2 * pi
+circum_of_circle = radius * pi * 2
+print(f'The area of the circle is {area_of_circle}.')
+print(f'The circumference of the circle is {circum_of_circle}.')
+
+  
