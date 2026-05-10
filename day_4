@@ -4,22 +4,17 @@ space = ' '
 company = 'Coding' + space + 'For' + space + 'All'
 print(company)
 print(len(company))
-company.upper()
-print(company)
-company.lower()
-print(company)
-company.title()
-print(company)
+print(company.upper())
+print(company.lower())
+print(company.title())
 print(company[7:])
 if company.find('Coding') == -1:
   print('\'Coding\' is not in the phrase')
 else:
   print('\'Coding\' is in the phrase')
-company.replace('Coding', 'Python')
-print(company)
+print(company.replace('Coding', 'Python'))
 py = 'Python For Everyone'
-py.replace('Everyone', 'All')
-print(py)
+print(py.replace('Everyone', 'All'))
 string_list2 = company.split(' ')
 print(string_list2)
 companies = 'Facebook,Google,Microsoft,Apple,IBM,Oracle,Amazon'
@@ -39,6 +34,33 @@ for word in cfa_list:
   abr1 = abr1 + word[0]
 print(abr)
 print(abr1)
+print(f'The first instance of \'C\' in \'Coding For All\' is at index {cfa.index('C')}')
+print(f'The first instance of \'F\' in \'Coding For All\' is at index {cfa.index('F')}')
+print(f'The last occurence of \'l\' in \'Coding For All People\' is at index {'Coding For All People'.rfind('l')}')
+sentence = 'You cannot end a sentence with because because because is a conjunction'
+first = sentence.find('because')
+print(f'The first occurence of \'because\' in \'{sentence}\' is at index {first}.')
+last = sentence.rindex('because')
+print(f'The last occurenct of \'because\' in \'{sentence}\' is at index {last}.')
+print(sentence[first:last + 7])
+print(f'\'Coding For All\' starts with the substring \'Coding\'? {cfa.startswith('Coding')}')
+print(f'\'Coding For All\' ends with the substring \'coding\'? {cfa.find('coding') + 6 == len(cfa)}')
+cfa1 = '   Coding For All      '
+print(cfa1.strip())
+print('# '.join(['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']))
+print('I am enjoying this challenge.\nI just wonder what is next.')
+print('''Name\tAge\tCountry\tCity
+Asabeneh\t250\tFinland\tHelsinki''')
+radius = 10
+area = 3.14 * radius ** 2
+print('The area of a circle with radius {} is {} meters square.'.format(radius, area))
+print('''8 + 6 = 14
+8 - 6 = 2
+8 * 6 = 48
+8 / 6 = 1.33
+8 % 6 = 2
+8 // 6 = 1
+8 ** 6 = 262144''')
 
 
 
