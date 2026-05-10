@@ -27,6 +27,21 @@ print(companies.split(','))
 print(f'The first character is {'Coding For All'[0]}.')
 print(f'The last index is {len('Coding For All') - 1}.')
 print(f'The character at index 10 is {'Coding For All'[10]}.')
+pfe = 'Python For Everyone'
+cfa = 'Coding For All'
+pfe_list = pfe.split()
+cfa_list = cfa.split()
+abr = ''
+abr1 = ''
+for word in pfe_list:
+  abr = abr + word[0]
+for word in cfa_list:
+  abr1 = abr1 + word[0]
+print(abr)
+print(abr1)
+
+
+
 
 
 
