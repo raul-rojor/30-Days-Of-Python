@@ -1,1 +1,28 @@
-
+dog = {}
+dog['name'] = 'Gordo'
+dog['age'] = 2
+dog['color'] = 'purple'
+dog['breed'] = 'Viltrumite'
+dog['legs'] = 5
+print(dog)
+student = {'first_name':'Donny',
+'last_name':'Pepper',
+'age':17,
+'gender':'male',
+'married?':False,
+'skills':['sociable guy', 'brilliant when it comes to solving problems creatively'],
+'country':'Turkey',
+'city':'Istanbul',
+'address':'no one knows'}
+print(student)
+print(f'The length of student is {len(student)}.')
+print(f'The type of the value of \'skills\' is {type(student['skills'])}. As you can see, it\'s a list ;)')
+student['skills'].append('human calculator')
+student['skills'].append('intensely focused on the task at hand')
+print(f'The updated skills of the students are the following: {student['skills']}.')
+print('The list of the student\'s dictionary\'s keys:', student.keys())
+print('The list of the student\'s dictionary\'s keys:', student.values())
+print('The new \'student\' is {}.'.format(student.items()))
+del student['married?']
+print('Now student might be married I suppose: {}.'.format(student))
+del student
