@@ -1,1 +1,37 @@
-
+# sets
+it_companies = {'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'}
+A = {19, 22, 24, 20, 25, 26}
+B = {19, 22, 20, 25, 26, 24, 28, 27}
+age = [22, 19, 24, 25, 26, 24, 25, 24]
+print('The length of the set \'it_companies\' is', len(it_companies))
+print(it_companies)
+it_companies.add('Twitter')
+print(it_companies)
+it_companies.update(['Ebay', 'AliBaba', 'TikTok'])
+print(it_companies)
+it_companies.remove('Apple')
+print(it_companies)
+print(A)
+print(B)
+print('A U B is', A | B, '.')
+print('The intersection of A and B is.', A & B, '.')
+print('A is a subset of B.', A.issubset(B))
+print('A and B are disjoint.', A.isdisjoint(B))
+A = A | B
+print('A is now', A)
+B = B | A
+print('B is now', B)
+print('The symmetric difference between A and B is', A.symmetric_difference(B))
+del A
+del B
+print('The ages are', age)
+age_dif = len(age) - len(set(age))
+bigger = 'neither'
+if age_dif > 0:
+  bigger = 'the list'
+elif age_dif < 0:
+  bigger = 'the set'
+print(f'The difference between the age list and age set is {abs(age_dif)}, where {bigger} is longer.')
+sent_list = 'I am a teacher and I love to inspire and teach people'.split()
+sent_set = set(sent_list)
+print(f'The sentence \'I am a teacher and I love to inspire and teach people\' has {len(sent_set)} unique words.')
