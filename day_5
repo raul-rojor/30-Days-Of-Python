@@ -1,1 +1,284 @@
+list1 = []
+list_eating = ['I', 'like', 'to', 'eat', 'a', 'lot', '.']
+list_len = len(list_eating)
+last_index = list_len - 1
+mid_index = list_len // 2
+list_first_mid_last = [list_eating[0], list_eating[mid_index], list_eating[last_index]]
+print(list_first_mid_last)
+mixed_types_list = ['Raul', 300, {'married?': False, 'home?': 'the big 210'}]
+print(mixed_types_list)
+it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+print(it_companies)
+print(f'There are {len(it_companies)} companies in the list.')
+print(f'The first company is {it_companies[0]}, the middle company is {it_companies[len(it_companies) // 2]}, and the last company is {it_companies[len(it_companies) -1]}.')
+it_companies[it_companies.index('Oracle')] = 'awesome wholesome rojo co'
+print(it_companies)
+it_companies.append('Anthropic')
+print(it_companies)
+it_companies.insert(len(it_companies) // 2, 'Nvidia')
+print(it_companies)
+it_companies[it_companies.index('Microsoft')] = it_companies[it_companies.index('Microsoft')].upper()
+print(it_companies)
+print('#; '.join(it_companies))
+print('Ebay' in it_companies)
+it_companies.sort()
+print(it_companies)
+it_companies.reverse()
+print(it_companies)
+print(it_companies[0:3])
+print(it_companies[-3:len(it_companies)])
+mid = len(it_companies) // 2
+last = mid + 1
+if len(it_companies) % 2 == 0:
+  mid -= 1
+print(it_companies[mid:last])
+del it_companies[0]
+print(it_companies)
+mid = len(it_companies) // 2
+last = mid + 1
+if len(it_companies) % 2 == 0:
+  mid -= 1
+del it_companies[mid:last]
+print(it_companies)
+del it_companies[len(it_companies) - 1]
+print(it_companies)
+it_companies.clear()
+del it_companies
+front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+back_end = ['Node','Express', 'MongoDB']
+front_back = front_end + back_end
+full_stack = front_back.copy()
+full_stack[full_stack.index('Redux') + 1:full_stack.index('Redux') + 1] = ['Python', 'SQL']
+print(full_stack)
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+ages.sort()
+print(ages)
+print(f'The youngest age is {ages[0]}.')
+print(f'The oldest age is {ages[len(ages) - 1]}.')
+m = len(ages) // 2
+l = len(ages) // 2 + 1
+med = [m]
+if len(ages) % 2 == 0:
+  m -= 1
+med = ages[m:l]
+med_total = 0
+for age in med:
+  med_total += age
+print(f'The median age is {med_total / len(med)}.')
+total = 0
+for age in ages:
+  total += age
+total = total / len(ages)
+print(f'The average age is {total} years.')
+print(f'The range of ages is {ages[len(ages) - 1] - ages[0]} years.')
+least_av = ages[0] - total
+greatest_av = ages[len(ages) - 1] - total
+print(f'The least age - average = {abs(least_av)} years and the greatest age - average = {abs(greatest_av)} years.')
+countries = [
+  'Afghanistan',
+  'Albania',
+  'Algeria',
+  'Andorra',
+  'Angola',
+  'Antigua and Barbuda',
+  'Argentina',
+  'Armenia',
+  'Australia',
+  'Austria',
+  'Azerbaijan',
+  'Bahamas',
+  'Bahrain',
+  'Bangladesh',
+  'Barbados',
+  'Belarus',
+  'Belgium',
+  'Belize',
+  'Benin',
+  'Bhutan',
+  'Bolivia',
+  'Bosnia and Herzegovina',
+  'Botswana',
+  'Brazil',
+  'Brunei',
+  'Bulgaria',
+  'Burkina Faso',
+  'Burundi',
+  'Cabo Verde',
+  'Cambodia',
+  'Cameroon',
+  'Canada',
+  'Central African Republic',
+  'Chad',
+  'Chile',
+  'China',
+  'Colombia',
+  'Comoros',
+  'Congo, Democratic Republic of the',
+  'Congo, Republic of the',
+  'Costa Rica',
+  "Côte d'Ivoire",
+  'Croatia',
+  'Cuba',
+  'Cyprus',
+  'Czech Republic',
+  'Denmark',
+  'Djibouti',
+  'Dominica',
+  'Dominican Republic',
+  'East Timor (Timor-Leste)',
+  'Ecuador',
+  'Egypt',
+  'El Salvador',
+  'Equatorial Guinea',
+  'Eritrea',
+  'Estonia',
+  'Eswatini',
+  'Ethiopia',
+  'Fiji',
+  'Finland',
+  'France',
+  'Gabon',
+  'Gambia',
+  'Georgia',
+  'Germany',
+  'Ghana',
+  'Greece',
+  'Grenada',
+  'Guatemala',
+  'Guinea',
+  'Guinea-Bissau',
+  'Guyana',
+  'Haiti',
+  'Honduras',
+  'Hungary',
+  'Iceland',
+  'India',
+  'Indonesia',
+  'Iran',
+  'Iraq',
+  'Ireland',
+  'Israel',
+  'Italy',
+  'Jamaica',
+  'Japan',
+  'Jordan',
+  'Kazakhstan',
+  'Kenya',
+  'Kiribati',
+  'Korea, North',
+  'Korea, South',
+  'Kuwait',
+  'Kyrgyzstan',
+  'Laos',
+  'Latvia',
+  'Lebanon',
+  'Lesotho',
+  'Liberia',
+  'Libya',
+  'Liechtenstein',
+  'Lithuania',
+  'Luxembourg',
+  'Madagascar',
+  'Malawi',
+  'Malaysia',
+  'Maldives',
+  'Mali',
+  'Malta',
+  'Marshall Islands',
+  'Mauritania',
+  'Mauritius',
+  'Mexico',
+  'Micronesia',
+  'Moldova',
+  'Monaco',
+  'Mongolia',
+  'Montenegro',
+  'Morocco',
+  'Mozambique',
+  'Myanmar',
+  'Namibia',
+  'Nauru',
+  'Nepal',
+  'Netherlands',
+  'New Zealand',
+  'Nicaragua',
+  'Niger',
+  'Nigeria',
+  'North Macedonia',
+  'Norway',
+  'Oman',
+  'Pakistan',
+  'Palau',
+  'Palestine',
+  'Panama',
+  'Papua New Guinea',
+  'Paraguay',
+  'Peru',
+  'Philippines',
+  'Poland',
+  'Portugal',
+  'Qatar',
+  'Romania',
+  'Russia',
+  'Rwanda',
+  'Saint Kitts and Nevis',
+  'Saint Lucia',
+  'Saint Vincent and the Grenadines',
+  'Samoa',
+  'San Marino',
+  'Sao Tome and Principe',
+  'Saudi Arabia',
+  'Senegal',
+  'Serbia',
+  'Seychelles',
+  'Sierra Leone',
+  'Singapore',
+  'Slovakia',
+  'Slovenia',
+  'Solomon Islands',
+  'Somalia',
+  'South Africa',
+  'South Sudan',
+  'Spain',
+  'Sri Lanka',
+  'Sudan',
+  'Suriname',
+  'Sweden',
+  'Switzerland',
+  'Syria',
+  'Tajikistan',
+  'Tanzania',
+  'Thailand',
+  'Togo',
+  'Tonga',
+  'Trinidad and Tobago',
+  'Tunisia',
+  'Turkey',
+  'Turkmenistan',
+  'Tuvalu',
+  'Uganda',
+  'Ukraine',
+  'United Arab Emirates',
+  'United Kingdom',
+  'United States',
+  'Uruguay',
+  'Uzbekistan',
+  'Vanuatu',
+  'Vatican City',
+  'Venezuela',
+  'Vietnam',
+  'Yemen',
+  'Zambia',
+  'Zimbabwe'
+]
+print('There are {} countries'.format(len(countries)))
+first_countries = countries[0:int(len(countries) / 2 + 0.5)]
+second_countries = countries[int(len(countries) / 2 + 0.5):]
+print(f'In the first country list there are {len(first_countries)} countries.')
+print(f'In the second country list there are {len(second_countries)} countries.')
+c, r, u, *rest = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+print(c)
+print(r)
+print(u)
+print(rest)
 
