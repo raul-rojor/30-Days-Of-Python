@@ -67,6 +67,7 @@ def sum_of_evens(num):
   return sum
 print(f'The sum of evens 0-10 is {sum_of_evens(10)}.')
 def evens_and_odds(num):
+  num = int(num)
   odds = num // 2
   evens = odds + 1
   if num % 2 == 1:
@@ -117,16 +118,16 @@ def calculate_variance(list):
   return sum / len(list)
 print(f'The variance of [3, 4, 5, 3, 4, 7, 3] is {calculate_variance([3, 4, 5, 3, 4, 7, 3])}.')
 def calculate_std(list):
-  return sqrt(calculate_variance(list))
+  return (calculate_variance(list)) ** 0.5
 print(f'The st. dev. of [3, 4, 5, 3, 4, 7, 3] is {calculate_std([3, 4, 5, 3, 4, 7, 3])}.')
 def greet(name = 'Guest'):
   return 'Hello, ' + name + '!'
-print(greet(Johnny))
+print(greet('Johnny'))
 print(greet())
 def show_args(**args):
   for k, v in args.items():
         print("key:", k, "value:", v)
-print(show_args('name' = 'adrian', 'happy' = True, 'bank_dollars' = 2))
+show_args(name = 'adrian', happy = True, bank_dollars = 2)
 def is_prime(num):
   start = 2
   while start < num - 1:
@@ -141,14 +142,14 @@ def unique_items(list):
 print(f'[3, 4, 5, 3, 4, 7, 3] has all unique entries. {unique_items([3, 4, 5, 3, 4, 7, 3])}.')
 print(f'[3, 4, 5, 7] has all unique entries. {unique_items([3, 4, 5, 7])}.')
 def same_type(list):
-  type = isinstance(list[0])
+  ty = type(list[0])
   for item in list:
-    if isinstance(item) != type:
+    if type(item) is not ty:
       return False
   return True
 print(f'[3, 4, 5, 3, 4, 7, 3] are all the same type entries. {same_type([3, 4, 5, 3, 4, 7, 3])}.')
-print(f'[3, 4, 5, 3, 4, 7, 3, 'robot'] has all the same type entries. {same_type([3, 4, 5, 3, 4, 7, 3, 'robot'])}.')
+print(f'[3, 4, 5, 3, 4, 7, 3, \'robot\'] has all the same type entries. {same_type([3, 4, 5, 3, 4, 7, 3, 'robot'])}.')
 def valid_var(var):
   return(var.isidentifier())
-print(f'\'Joseph\' is a valid Python variable name. {valid_var('Joseph')}.')
+print(f'\'J-oseph\' is a valid Python variable name. {valid_var('J-oseph')}.')
 print(f'\'joseph_2\' is a valid Python variable name. {valid_var('joseph_2')}.')
