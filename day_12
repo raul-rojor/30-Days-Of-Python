@@ -1,0 +1,53 @@
+from random import randint
+from string import ascii_letters, digits
+def random_user_id():
+  possible = ascii_letters + digits
+  id = ''
+  for i in range(6):
+    id = id + possible[randint(0,61)]
+  return id
+print(random_user_id())
+print(random_user_id())
+print(random_user_id())
+def user_id_gen_by_user():
+  chars = int(input('How many characters in each ID? '))
+  ids = int(input('How many IDs? '))
+  possible = ascii_letters + digits
+  id_list = []
+  for i in range(ids):
+    id = ''
+    for j in range(chars):
+      id = id + possible[randint(0,61)]
+    id_list.append(id)
+  return id_list
+print(f'Here are random IDs: {user_id_gen_by_user()}.')
+def rgb_color_gen():
+  r = randint(0,255)
+  g = randint(0,255)
+  b = randint(0,255)
+  return 'rgb(' + str(r) + ',' + str(g) + ',' + str(b) + ')'
+print(rgb_color_gen())
+print(rgb_color_gen())
+print(rgb_color_gen())
+def list_of_hexa_colors(num):
+  possible = ascii_letters[0:6] + digits
+  id_list = []
+  for i in range(num):
+    id = ''
+    for j in range(6):
+      id = id + possible[randint(0,15)]
+    id_list.append('#' + id)
+  return id_list
+print(f'7 hexa colors: {list_of_hexa_colors(7)}.')
+def generate_colors(col, num):
+  if col == 'hexa':
+    return list_of_hexa_colors(num)   
+  elif col == 'rgb':
+    colors = []
+    for i in range(num):
+      colors.append(rgb_color_gen())
+    return colors
+  else:
+    return 'That is not a color type.'
+print(f'Here are 3 hexa colors: {generate_colors('hexa', 3)}.')
+print(f'Here are 2 rgb colors: {generate_colors('rgb', 2)}.')   
