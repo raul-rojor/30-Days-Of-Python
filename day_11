@@ -1,1 +1,154 @@
-
+  elif month in ['June', 'July', 'August']:
+    return 'Summer'
+  elif month in ['September', 'October', 'November']:
+    return 'Autumn'
+  else:
+    return 'Your input is not a properly written month'
+print(f'March is in {check_season('March')}.')
+def calculate_slope(equation):
+  start = len(equation) - 1
+  slope = False
+  slo = ''
+  while start > -1:
+    if slope:
+        if equation[start] == ' ':
+          return float(slo)
+        slo = equation[start] + slo
+    if equation[start] == 'x':
+      slope = True
+    start -= 1
+  return float(slo)
+print(f'The slope of the equation \'y = 8x + 17\' is {calculate_slope('y = 8x + 17')}.')
+def solve_quadratic_eqn(a, b, c):
+  root = (-b + (b ** 2 - 4 * a * c) ** 0.5) / (2 * a)
+  soltns = [root, -root]
+  return set(soltns)
+print(f'The roots of \'4x^2 + 7x - 12\' are: {solve_quadratic_eqn(4, 7, -12)}.')
+def print_list(list):
+  for item in list:
+    print(item)
+def reverse_list(list):
+  reversed = []
+  i = len(list) - 1
+  while i >= 0:
+    reversed.append(list[i])
+    i -= 1
+  return reversed
+print(f'The reverse of the list \'[\'happy\', \'sad\', \'angry\']\' is {reverse_list(['happy', 'sad', 'angry'])}.')
+def capitalize_list_items(list):
+  for i in range(len(list)):
+    list[i] = list[i].upper()
+  return list
+print(capitalize_list_items(['happy', 'sad', 'angry']))
+def add_item(list, item):
+  list.append(item)
+  return list
+print(f'I will add the emotion \'confused\': {add_item(['happy', 'sad', 'angry'], 'confused')}.')
+def remove_item(list, item):
+  list.remove(item)
+  return list
+print(f'I will now remove the emotion \'confused\': {remove_item(['happy', 'sad', 'angry', 'confused'], 'confused')}.')
+def factorial(num):
+  sum = 0
+  for i in range(num + 1):
+    sum += i
+  return sum
+print(f'10! is {factorial(10)}.')
+def sum_of_odds(num):
+  sum = 0
+  for i in range(1, num + 1, 2):
+    sum += i
+  return sum
+print(f'The sum of odds 0-10 is {sum_of_odds(10)}.')
+def sum_of_evens(num):
+  sum = 0
+  for i in range(0, num + 1, 2):
+    sum += i
+  return sum
+print(f'The sum of evens 0-10 is {sum_of_evens(10)}.')
+def evens_and_odds(num):
+  odds = num // 2
+  evens = odds + 1
+  if num % 2 == 1:
+    odds += 1
+  print(f'The number of odds is {odds}.')
+  print(f'The number of evens is {evens}.')
+evens_and_odds(input('give a positive int: '))
+def is_empty(inp):
+  if not inp:
+    return True
+  return False
+print(f'Should give \'True\': {is_empty([])}.')
+def calculate_mean(list):
+  sum = 0
+  for item in list:
+    sum += item
+  return sum / len(list)
+print(f'The mean of [3, 4, 5, 6, 7] is {calculate_mean([3, 4, 5, 6, 7])}.')
+def calculate_median(list):
+  list.sort()
+  length = len(list)
+  if length % 2 == 1:
+    return list[length // 2]
+  return (list[length // 2 - 1] + list[length // 2]) / 2
+print(f'The median of [3, 4, 5, 6, 7, 8] is {calculate_median([3, 4, 5, 6, 7, 8])}.')
+def calculate_mode(list):
+  highest = 0
+  item = 0
+  for item1 in list:
+    high = 0
+    for item2 in list:
+      if item1 == item2:
+        high += 1
+    if high > highest:
+      highest = high
+      item = item1
+  return item
+print(f'The mode of [3, 4, 5, 3, 4, 7, 3] is {calculate_mode([3, 4, 5, 3, 4, 7, 3])}.')
+def calculate_range(list):
+  list.sort()
+  return list[len(list) - 1] - list[0]
+print(f'The range of [3, 4, 5, 3, 4, 7, 3] is {calculate_range([3, 4, 5, 3, 4, 7, 3])}.')
+def calculate_variance(list):
+  sum = 0
+  mean = calculate_mean(list)
+  for item in list:
+    sum += (item - mean) ** 2
+  return sum / len(list)
+print(f'The variance of [3, 4, 5, 3, 4, 7, 3] is {calculate_variance([3, 4, 5, 3, 4, 7, 3])}.')
+def calculate_std(list):
+  return sqrt(calculate_variance(list))
+print(f'The st. dev. of [3, 4, 5, 3, 4, 7, 3] is {calculate_std([3, 4, 5, 3, 4, 7, 3])}.')
+def greet(name = 'Guest'):
+  return 'Hello, ' + name + '!'
+print(greet(Johnny))
+print(greet())
+def show_args(**args):
+  for k, v in args.items():
+        print("key:", k, "value:", v)
+print(show_args('name' = 'adrian', 'happy' = True, 'bank_dollars' = 2))
+def is_prime(num):
+  start = 2
+  while start < num - 1:
+    if num % start == 0:
+      return False
+    start += 1
+  return True
+print(f'7 is prime. {is_prime(7)}.')
+print(f'77 is prime. {is_prime(77)}.')
+def unique_items(list):
+  return len(list) == len(set(list))
+print(f'[3, 4, 5, 3, 4, 7, 3] has all unique entries. {unique_items([3, 4, 5, 3, 4, 7, 3])}.')
+print(f'[3, 4, 5, 7] has all unique entries. {unique_items([3, 4, 5, 7])}.')
+def same_type(list):
+  type = isinstance(list[0])
+  for item in list:
+    if isinstance(item) != type:
+      return False
+  return True
+print(f'[3, 4, 5, 3, 4, 7, 3] are all the same type entries. {same_type([3, 4, 5, 3, 4, 7, 3])}.')
+print(f'[3, 4, 5, 3, 4, 7, 3, 'robot'] has all the same type entries. {same_type([3, 4, 5, 3, 4, 7, 3, 'robot'])}.')
+def valid_var(var):
+  return(var.isidentifier())
+print(f'\'Joseph\' is a valid Python variable name. {valid_var('Joseph')}.')
+print(f'\'joseph_2\' is a valid Python variable name. {valid_var('joseph_2')}.')
