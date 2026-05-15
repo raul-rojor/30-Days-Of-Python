@@ -1,0 +1,14 @@
+numbers = [-4, -3, -2, -1, 0, 2, 4, 6]
+print([i for i in numbers if i <= 0])
+list_of_lists =[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print([j for i in list_of_lists for j in i])
+print([(i, 1, i, i**2, i**3, i**4, i**5) for i in range(11)])
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+print([[first.upper(), first.upper()[0:3], last.upper()] for [(first, last)] in countries])
+print([{'country': first.upper(), 'city': last.upper()} for [(first, last)] in countries])
+names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+print([first + ' ' + last for [(first, last)] in names])
+slope = lambda a, b: a
+y_intercept = lambda a, b: b
+print(f'The slope of the function \'y = -7x + 4\' is {slope(-7, 4)}.')
+print(f'The y-intercept of the function \'y = 2x - 1\' is {slope(2, -1)}.')
