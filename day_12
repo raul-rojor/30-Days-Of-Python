@@ -50,4 +50,26 @@ def generate_colors(col, num):
   else:
     return 'That is not a color type.'
 print(f'Here are 3 hexa colors: {generate_colors('hexa', 3)}.')
-print(f'Here are 2 rgb colors: {generate_colors('rgb', 2)}.')   
+print(f'Here are 2 rgb colors: {generate_colors('rgb', 2)}.')
+def shuffle_list(list):
+  indlist = []
+  shuffled = []
+  for i in range(len(list)):
+    indlist.append(i)
+  for j in range(len(list)):
+    x = randint(0,len(indlist) - 1)
+    shuffled.append(list[indlist[x]])
+    del indlist[x]
+  return shuffled
+print(f'[\'jack\', \'john\', \'jay\', \'jason\'] shuffled is {shuffle_list(['jack', 'john', 'jay', 'jason'])}.')
+print(f'[\'jack\', \'john\', \'jay\', \'jason\'] shuffled is {shuffle_list(['jack', 'john', 'jay', 'jason'])}.')
+def sev_rand():
+  list = []
+  for i in range(7):
+    x = randint(0,9)
+    while x in list:
+      x += 1
+    list.append(x)
+  return list
+print(sev_rand())
+print(sev_rand())
