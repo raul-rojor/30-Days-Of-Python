@@ -1,0 +1,24 @@
+# syntax error
+print('hey what\'s up').
+# name error
+age = 18
+print(ag)
+# index error
+happy = ['yes', 'very', 'not really']
+print(happy[3])
+# module not found error
+import functuls
+# attribute error
+import functools
+print(functools.reduc(lambda x, y: x-y, [0, 1, 2, 3, 4]))
+# key error
+ppl_age = {'james': 2, 'brandi': 5}
+print(ppl_age['jeremy'])
+# type error
+print('I am ' + 12 + ' years old.')
+# import error
+from random import randin
+# value error
+print(float('8.2j'))
+# zero division error
+age = 12 / 0
