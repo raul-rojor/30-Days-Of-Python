@@ -1,0 +1,277 @@
+from functools import reduce
+countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
+names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def excite(val):
+  return str(val) + '!'
+print(list(map(excite, countries)))
+for country in countries:
+    print(country)
+for name in names:
+    print(name)
+for num in numbers:
+    print(num)
+upper_countries = map(lambda x: x.upper(), countries)
+print(list(upper_countries))
+square_nums = map(lambda x: x**2, numbers)
+print(list(square_nums))
+upper_names = map(lambda x: x.upper(), names)
+print(list(upper_names))
+def land(country):
+    if 'land' in country:
+      return True
+    return False
+print(list(filter(land, countries)))
+def six(country):
+    if len(country) == 6:
+      return True
+    return False
+print(list(filter(six, countries)))
+def sixplus(country):
+    if len(country) >= 6:
+      return True
+    return False
+print(list(filter(sixplus, countries)))
+def estart(country):
+    if 'E' == country[0]:
+      return True
+    return False
+print(list(filter(estart, countries)))
+landsix = filter(land, filter(six, countries))
+print(list(landsix))
+def get_string_lists(lst):
+  return list(filter(lambda x: isinstance(x, str), lst))
+print(['happy', 2, 8, 'sad'])
+print(get_string_lists(['happy', 2, 8, 'sad']))
+print(reduce(lambda x,y: x+y, numbers))
+def join_countries(country1, country2):
+  if country2 == 'Iceland':
+    return country1 + ', and ' + country2 +  ' are north European countries.'
+  else:
+    return country1 + ', ' + country2
+concated = reduce(join_countries, countries)
+print(concated)
+countries2 = [
+  'Afghanistan',
+  'Albania',
+  'Algeria',
+  'Andorra',
+  'Angola',
+  'Antigua and Barbuda',
+  'Argentina',
+  'Armenia',
+  'Australia',
+  'Austria',
+  'Azerbaijan',
+  'Bahamas',
+  'Bahrain',
+  'Bangladesh',
+  'Barbados',
+  'Belarus',
+  'Belgium',
+  'Belize',
+  'Benin',
+  'Bhutan',
+  'Bolivia',
+  'Bosnia and Herzegovina',
+  'Botswana',
+  'Brazil',
+  'Brunei',
+  'Bulgaria',
+  'Burkina Faso',
+  'Burundi',
+  'Cabo Verde',
+  'Cambodia',
+  'Cameroon',
+  'Canada',
+  'Central African Republic',
+  'Chad',
+  'Chile',
+  'China',
+  'Colombia',
+  'Comoros',
+  'Congo, Democratic Republic of the',
+  'Congo, Republic of the',
+  'Costa Rica',
+  "Côte d'Ivoire",
+  'Croatia',
+  'Cuba',
+  'Cyprus',
+  'Czech Republic',
+  'Denmark',
+  'Djibouti',
+  'Dominica',
+  'Dominican Republic',
+  'East Timor (Timor-Leste)',
+  'Ecuador',
+  'Egypt',
+  'El Salvador',
+  'Equatorial Guinea',
+  'Eritrea',
+  'Estonia',
+  'Eswatini',
+  'Ethiopia',
+  'Fiji',
+  'Finland',
+  'France',
+  'Gabon',
+  'Gambia',
+  'Georgia',
+  'Germany',
+  'Ghana',
+  'Greece',
+  'Grenada',
+  'Guatemala',
+  'Guinea',
+  'Guinea-Bissau',
+  'Guyana',
+  'Haiti',
+  'Honduras',
+  'Hungary',
+  'Iceland',
+  'India',
+  'Indonesia',
+  'Iran',
+  'Iraq',
+  'Ireland',
+  'Israel',
+  'Italy',
+  'Jamaica',
+  'Japan',
+  'Jordan',
+  'Kazakhstan',
+  'Kenya',
+  'Kiribati',
+  'Korea, North',
+  'Korea, South',
+  'Kuwait',
+  'Kyrgyzstan',
+  'Laos',
+  'Latvia',
+  'Lebanon',
+  'Lesotho',
+  'Liberia',
+  'Libya',
+  'Liechtenstein',
+  'Lithuania',
+  'Luxembourg',
+  'Madagascar',
+  'Malawi',
+  'Malaysia',
+  'Maldives',
+  'Mali',
+  'Malta',
+  'Marshall Islands',
+  'Mauritania',
+  'Mauritius',
+  'Mexico',
+  'Micronesia',
+  'Moldova',
+  'Monaco',
+  'Mongolia',
+  'Montenegro',
+  'Morocco',
+  'Mozambique',
+  'Myanmar',
+  'Namibia',
+  'Nauru',
+  'Nepal',
+  'Netherlands',
+  'New Zealand',
+  'Nicaragua',
+  'Niger',
+  'Nigeria',
+  'North Macedonia',
+  'Norway',
+  'Oman',
+  'Pakistan',
+  'Palau',
+  'Palestine',
+  'Panama',
+  'Papua New Guinea',
+  'Paraguay',
+  'Peru',
+  'Philippines',
+  'Poland',
+  'Portugal',
+  'Qatar',
+  'Romania',
+  'Russia',
+  'Rwanda',
+  'Saint Kitts and Nevis',
+  'Saint Lucia',
+  'Saint Vincent and the Grenadines',
+  'Samoa',
+  'San Marino',
+  'Sao Tome and Principe',
+  'Saudi Arabia',
+  'Senegal',
+  'Serbia',
+  'Seychelles',
+  'Sierra Leone',
+  'Singapore',
+  'Slovakia',
+  'Slovenia',
+  'Solomon Islands',
+  'Somalia',
+  'South Africa',
+  'South Sudan',
+  'Spain',
+  'Sri Lanka',
+  'Sudan',
+  'Suriname',
+  'Sweden',
+  'Switzerland',
+  'Syria',
+  'Tajikistan',
+  'Tanzania',
+  'Thailand',
+  'Togo',
+  'Tonga',
+  'Trinidad and Tobago',
+  'Tunisia',
+  'Turkey',
+  'Turkmenistan',
+  'Tuvalu',
+  'Uganda',
+  'Ukraine',
+  'United Arab Emirates',
+  'United Kingdom',
+  'United States',
+  'Uruguay',
+  'Uzbekistan',
+  'Vanuatu',
+  'Vatican City',
+  'Venezuela',
+  'Vietnam',
+  'Yemen',
+  'Zambia',
+  'Zimbabwe'
+]
+def categorize_countries(lst):
+  def stan(country):
+    if 'stan' in country:
+      return True
+    return False
+  return list(filter(stan, lst))
+print(categorize_countries(countries2))
+def letter_count(list):
+  dict = {}
+  letter = list[0][0]
+  count = 0
+  for country in list:
+    if country[0] == letter:
+      count += 1
+    else:
+      dict[letter] = count
+      count = 0
+      letter = country[0]
+  dict[letter] = count
+  return dict
+print(letter_count(countries2))
+def get_first_ten_countries(list):
+  return list[0:10]
+def get_last_ten_countries(list):
+  return list[len(list) - 11:len(list)]
+print(get_first_ten_countries(countries2))
+print(get_last_ten_countries(countries2))
