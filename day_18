@@ -43,4 +43,4 @@ while len(words) < 3:
     elif count == num:
       temp.append(word)
   words = words + temp
-print(', '.join(words), 'is/are the most frequent word(s) in the paragraph.')
+print(', '.join(words), 'are the most frequent words in the paragraph.')
