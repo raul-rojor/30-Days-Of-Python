@@ -1,0 +1,31 @@
+import re
+def wrds_lns_in_file(filename):
+  with open(filename) as file:
+    text = file.read()
+    lines = text.splitlines()
+    wrds = re.findall(r'\b\w+\b', text)
+    print('The number of lines in the speech is {}, and the number of words in the speech is {}.'.format(len(lines), len(wrds)))
+wrds_lns_in_file('./data/obama_speech.txt')
+wrds_lns_in_file('./data/michelle_obama_speech.txt')
+wrds_lns_in_file('./data/donald_speech.txt')
+wrds_lns_in_file('./data/melina_trump_speech.txt')
+import json
+def most_spoken_languages(filename, lang_num):
+  with open(filename, 'r') as file:
+    country_list = json.load(file)
+    lang_pop = {}
+    for country in country_list:
+      for lang in country['languages']:
+        lang_pop[lang] = lang_pop.get(lang, 0) + country['population']   
+  most_spoken = []
+  while len(most_spoken) < lang_num:
+    pop = 0
+    language = ''
+    for k, v in lang_pop.items():
+      if v > pop:
+        language = k
+        pop = v
+    most_spoken.append(language)
+    del lang_pop[language]
+  return most_spoken
+print(most_spoken_languages('./data/countries_data.json', 10))
